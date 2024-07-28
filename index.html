@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App With JavaScript</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="main">
-        <div class="navbar">
-            <img src="pic/logo.png" class="logo">
+    <div class="container">
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Enter your location" class="input-box">
 
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="skills.html">SKILLS</a></li>
-                <li><a href="my works.html">MY WORKS</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+            </div>
         </div>
 
-        <div class="info">
-            <h3>Hi, I'm <span>Vishal Kumar </span>.</h3>
-            <h1><span>W</span>EB <span>D</span>ESIGNER</h1>
-            <h3> Fullstack web devloper  from gwalior,india. 
-                I create <br> websites to do businesses do better and well organize  <br> online.</h3>
-                <a href="#">Hire Me</a>
+        <div class="location-not-found">
+            <h1>Sorry, Location not found!!!</h1>
+            <img src="/assets/404.png" alt="404 Error">
         </div>
 
-        <div class="image">
-            <img src="pic/vishal.png" class="girl">
-        </div>
+        <div class="weather-body">
+            <img src="/assets/cloud.png" alt="Weather Image" class="weather-img">
 
-        <div class="icons">
-            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <div class="weather-box">
+                <p class="temperature">0 <sup>°C</sup></p>
+                <p class="description">light rain</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-sharp fa-solid fa-droplet"></i>
+                    <div class="text">
+                        <span id="humidity">45%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <span id="wind-speed">12Km/H</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/595a890311.js" crossorigin="anonymous"></script>
 </body>
 </html>
